@@ -1,4 +1,2 @@
-# Vanna
-My CV
-test it
-
+# Python Leetcode Sulotion
+let's complete all the stuff oyeh!
