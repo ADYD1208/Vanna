@@ -1,5 +1,6 @@
-#两轮遍历
-#时间复杂度: O(N^2)******- 空间复杂度: O(1)
+#Approach 1: Brute Force******
+#Time complexity O(N^2)******
+#Space complexity O(1)******
 class Solution(object):
     def twoSum(self, nums, target):
         """
@@ -13,8 +14,9 @@ class Solution(object):
                     return [i, j]
                     
          
-#建立字典
-#时间复杂度: O(N)******- 空间复杂度: O(N)
+#Approach 2: Two-pass Hash Table******
+#Time complexity O(N)******
+#Space complexity O(1)******
 class Solution(object):
     def twoSum(self, nums, target):
         """
@@ -38,8 +40,10 @@ class Solution(object):
 
 
 
-#建立字典
-#时间复杂度: O(N)******- 空间复杂度: O(N)
+
+#Approach 2: One-pass Hash Table******
+#Time complexity O(N)******
+#Space complexity O(1)******
 class Solution(object):
     def twoSum(self, nums, target):
         """
