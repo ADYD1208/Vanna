@@ -1,0 +1,57 @@
+#两轮遍历
+#时间复杂度: O(N^2)******- 空间复杂度: O(1)
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        for i in range(len(nums)):
+            for j in range(i+1, len(nums)):
+                if nums[i] + nums[j] == target:
+                    return [i, j]
+                    
+         
+#建立字典
+#时间复杂度: O(N)******- 空间复杂度: O(N)
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        # 先做一個hash table
+        hash_table={}
+        for i in range(len(nums)):    
+            hash_table[nums[i]]=i
+        #对于nums内每一个元素查找其与目标值的差别
+        for i in range(len(nums)):
+            #如果在字典内
+            if target-nums[i] in hash_table:
+                #且不是它本身
+                if hash_table[target-nums[i]] != i:
+                    return [i, hash_table[target-nums[i]]]
+        return []
+
+
+
+
+#建立字典
+#时间复杂度: O(N)******- 空间复杂度: O(N)
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        lookup = {}
+        for i, num in enumerate(nums):
+            #enumerte简化之前既要索引表又要遍历表
+            #同时查询
+            if target - num in lookup:
+                return [lookup[target-num], i]
+            else:
+                lookup[num] = i
